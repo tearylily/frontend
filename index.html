@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SCHOOLNET</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <!-- CABEÇALHO -->
+            <header class="login-header">
+
+                <div class="logo">
+                    🏫
+                </div>
+
+                <h1>SCHOOLNET</h1>
+
+                <p>Portal Escolar</p>
+
+            </header>
+
+
+            <!-- MENSAGEM DE ERRO -->
+            <div
+                id="loginMessage"
+                class="message message-error hidden"
+                role="alert"
+            >
+                E-mail ou senha incorretos.
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+            <form id="loginForm">
+
+                <!-- E-MAIL -->
+                <div class="form-group">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- SENHA -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- OPÇÕES -->
+                <div class="login-options">
+
+                    <label class="remember-me">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                            name="remember"
+                        >
+
+                        <span>Lembrar-me</span>
+
+                    </label>
+
+
+                    <a
+                        href="#"
+                        id="forgotPassword"
+                    >
+                        Esqueci minha senha
+                    </a>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="btn btn-primary"
+                >
+                    ENTRAR
+                </button>
+
+            </form>
+
+
+            <!-- RODAPÉ -->
+            <footer class="login-footer">
+
+                <p>SCHOOLNET</p>
+
+                <span>
+                    Sistema de gerenciamento escolar
+                </span>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT EXTERNO -->
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

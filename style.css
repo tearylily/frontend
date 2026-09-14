@@ -1,0 +1,502 @@
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    color: #1f2937;
+}
+
+
+/* =========================================
+   PÁGINA DE LOGIN
+========================================= */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #eaf2ff 0%,
+        #f8fbff 50%,
+        #dfeeff 100%
+    );
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.login-card {
+    width: 100%;
+
+    padding: 40px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e3eaf4;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #2563eb;
+
+    border-radius: 18px;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.login-header h1 {
+    margin-bottom: 6px;
+
+    color: #1d4ed8;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.login-header p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-group input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #111827;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   INPUT EM FOCO
+========================================= */
+
+.form-group input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================
+   OPÇÕES
+========================================= */
+
+.login-options {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   LEMBRAR-ME
+========================================= */
+
+.remember-me {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #6b7280;
+
+    cursor: pointer;
+}
+
+
+.remember-me input {
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ESQUECI A SENHA
+========================================= */
+
+.login-options a {
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.btn {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   BOTÃO PRIMÁRIO
+========================================= */
+
+.btn-primary {
+    background-color: #2563eb;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+
+    box-shadow:
+        0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =========================================
+   CLIQUE
+========================================= */
+
+.btn-primary:active {
+    transform: scale(0.99);
+}
+
+
+/* =========================================
+   DESABILITADO
+========================================= */
+
+.btn:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   MENSAGENS
+========================================= */
+
+.message {
+    padding: 12px 14px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   ERRO
+========================================= */
+
+.message-error {
+    background-color: #fef2f2;
+
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+}
+
+
+/* =========================================
+   SUCESSO
+========================================= */
+
+.message-success {
+    background-color: #f0fdf4;
+
+    color: #15803d;
+
+    border: 1px solid #bbf7d0;
+}
+
+
+/* =========================================
+   ESCONDIDO
+========================================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.login-footer {
+    margin-top: 28px;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.login-footer p {
+    margin-bottom: 4px;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.login-footer span {
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .login-page {
+        padding: 15px;
+    }
+
+
+    .login-card {
+        padding: 30px 22px;
+
+        border-radius: 14px;
+    }
+
+
+    .logo {
+        width: 62px;
+        height: 62px;
+
+        font-size: 29px;
+
+        border-radius: 15px;
+    }
+
+
+    .login-header h1 {
+        font-size: 24px;
+    }
+
+
+    .login-header p {
+        font-size: 13px;
+    }
+
+
+    .login-options {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .form-group input {
+        height: 46px;
+    }
+
+
+    .btn {
+        height: 46px;
+    }
+}
+
+
+/* =========================================
+   TELAS GRANDES
+========================================= */
+
+@media (min-width: 1200px) {
+
+    .login-card {
+        padding: 45px;
+    }
+
+}

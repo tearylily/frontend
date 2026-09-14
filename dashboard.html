@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - SCHOOLNET</title>
+
+</head>
+
+<body>
+
+    <h1>Dashboard SCHOOLNET</h1>
+
+    <p id="welcome"></p>
+
+
+    <script>
+
+        const user =
+            JSON.parse(
+                localStorage.getItem("user")
+            );
+
+
+        if (user) {
+
+            document.getElementById("welcome").textContent =
+                `Olá, ${user.name}!`;
+
+        } else {
+
+            document.getElementById("welcome").textContent =
+                "Usuário não encontrado.";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

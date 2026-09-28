@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Schoolnet - Eventos</title>
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span>Schoolnet</span>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Usuários</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-school"></i>
+
+                <span>Turmas</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span>Materiais</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>Notas</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span>Agenda</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <span>Horários</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item active">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Eventos</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <span>Logs</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Configurações</span>
+
+            </a>
+
+
+            <a href="#" class="menu-item sair">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div>
+
+                <h1>Eventos</h1>
+
+                <p>
+                    Gerencie os eventos e atividades da escola.
+                </p>
+
+            </div>
+
+
+
+            <div class="user-area">
+
+
+                <div class="notification">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>2</span>
+
+                </div>
+
+
+                <div class="user-info">
+
+                    <strong>Administrador</strong>
+
+                    <small>Admin</small>
+
+                </div>
+
+
+                <div class="avatar">
+                    A
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="content">
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="eventos-heading">
+
+
+                <div>
+
+                    <h2>Eventos escolares</h2>
+
+                    <p>
+                        Consulte e organize os próximos eventos.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="openEventoModal">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Novo evento
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTROS
+            ================================================== -->
+
+            <div class="eventos-filter-card">
+
+
+                <div class="eventos-filters">
+
+
+                    <!-- BUSCA -->
+
+                    <div class="evento-filter-group search-evento">
+
+                        <label for="eventoSearch">
+                            Buscar
+                        </label>
+
+                        <div class="evento-search-box">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="eventoSearch"
+                                placeholder="Buscar evento..."
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TIPO -->
+
+                    <div class="evento-filter-group">
+
+                        <label for="tipoEventoFilter">
+                            Tipo
+                        </label>
+
+                        <select id="tipoEventoFilter">
+
+                            <option value="">
+                                Todos
+                            </option>
+
+                            <option value="academico">
+                                Acadêmico
+                            </option>
+
+                            <option value="esportivo">
+                                Esportivo
+                            </option>
+
+                            <option value="cultural">
+                                Cultural
+                            </option>
+
+                            <option value="reuniao">
+                                Reunião
+                            </option>
+
+                            <option value="comemorativo">
+                                Comemorativo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- PÚBLICO -->
+
+                    <div class="evento-filter-group">
+
+                        <label for="publicoFilter">
+                            Público
+                        </label>
+
+                        <select id="publicoFilter">
+
+                            <option value="">
+                                Todos
+                            </option>
+
+                            <option value="alunos">
+                                Alunos
+                            </option>
+
+                            <option value="professores">
+                                Professores
+                            </option>
+
+                            <option value="responsaveis">
+                                Responsáveis
+                            </option>
+
+                            <option value="todos">
+                                Toda a escola
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- MÊS -->
+
+                    <div class="evento-filter-group">
+
+                        <label for="mesFilter">
+                            Mês
+                        </label>
+
+                        <select id="mesFilter">
+
+                            <option value="">
+                                Todos
+                            </option>
+
+                            <option value="01">
+                                Janeiro
+                            </option>
+
+                            <option value="02">
+                                Fevereiro
+                            </option>
+
+                            <option value="03">
+                                Março
+                            </option>
+
+                            <option value="04">
+                                Abril
+                            </option>
+
+                            <option value="05">
+                                Maio
+                            </option>
+
+                            <option value="06">
+                                Junho
+                            </option>
+
+                            <option value="07">
+                                Julho
+                            </option>
+
+                            <option value="08">
+                                Agosto
+                            </option>
+
+                            <option value="09">
+                                Setembro
+                            </option>
+
+                            <option value="10">
+                                Outubro
+                            </option>
+
+                            <option value="11">
+                                Novembro
+                            </option>
+
+                            <option value="12">
+                                Dezembro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CABEÇALHO DOS EVENTOS
+            ================================================== -->
+
+            <div class="eventos-list-heading">
+
+
+                <div>
+
+                    <h3>
+                        Próximos eventos
+                    </h3>
+
+                    <span id="eventoCount">
+                        6 eventos
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="refresh-button"
+                    id="refreshEventos">
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 GRID DE EVENTOS
+            ================================================== -->
+
+            <div
+                class="eventos-grid"
+                id="eventosGrid">
+
+
+
+                <!-- EVENTO 1 -->
+
+                <article
+                    class="evento-card"
+                    data-tipo="academico"
+                    data-publico="alunos"
+                    data-mes="09"
+                    data-nome="Feira de Ciências">
+
+
+                    <div class="evento-card-top">
+
+
+                        <div class="evento-date">
+
+                            <strong>
+                                25
+                            </strong>
+
+                            <span>
+                                SET
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-type academic">
+
+                            <i class="fa-solid fa-flask"></i>
+
+                            Acadêmico
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="evento-card-body">
+
+                        <h3>
+                            Feira de Ciências
+                        </h3>
+
+                        <p>
+                            Exposição dos projetos científicos
+                            desenvolvidos pelos alunos.
+                        </p>
+
+
+                        <div class="evento-info">
+
+                            <span>
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                08:00 - 12:00
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Pátio principal
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-publico">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            Alunos
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evento-card-footer">
+
+                        <button
+                            class="evento-action edit"
+                            onclick="editarEvento(this)">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="evento-action delete"
+                            onclick="excluirEvento(this)">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- EVENTO 2 -->
+
+                <article
+                    class="evento-card"
+                    data-tipo="reuniao"
+                    data-publico="responsaveis"
+                    data-mes="09"
+                    data-nome="Reunião de Pais">
+
+
+                    <div class="evento-card-top">
+
+
+                        <div class="evento-date">
+
+                            <strong>
+                                28
+                            </strong>
+
+                            <span>
+                                SET
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-type meeting">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            Reunião
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="evento-card-body">
+
+                        <h3>
+                            Reunião de Pais
+                        </h3>
+
+                        <p>
+                            Reunião com os responsáveis para
+                            acompanhamento do desempenho escolar.
+                        </p>
+
+
+                        <div class="evento-info">
+
+                            <span>
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                18:30 - 20:00
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Auditório
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-publico">
+
+                            <i class="fa-solid fa-user-group"></i>
+
+                            Responsáveis
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evento-card-footer">
+
+                        <button
+                            class="evento-action edit"
+                            onclick="editarEvento(this)">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="evento-action delete"
+                            onclick="excluirEvento(this)">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- EVENTO 3 -->
+
+                <article
+                    class="evento-card"
+                    data-tipo="esportivo"
+                    data-publico="alunos"
+                    data-mes="10"
+                    data-nome="Jogos Escolares">
+
+
+                    <div class="evento-card-top">
+
+
+                        <div class="evento-date">
+
+                            <strong>
+                                04
+                            </strong>
+
+                            <span>
+                                OUT
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-type sports">
+
+                            <i class="fa-solid fa-futbol"></i>
+
+                            Esportivo
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="evento-card-body">
+
+                        <h3>
+                            Jogos Escolares
+                        </h3>
+
+                        <p>
+                            Competição esportiva entre as turmas
+                            da escola.
+                        </p>
+
+
+                        <div class="evento-info">
+
+                            <span>
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                07:30 - 16:30
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Quadra esportiva
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-publico">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            Alunos
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evento-card-footer">
+
+                        <button
+                            class="evento-action edit"
+                            onclick="editarEvento(this)">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="evento-action delete"
+                            onclick="excluirEvento(this)">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- EVENTO 4 -->
+
+                <article
+                    class="evento-card"
+                    data-tipo="cultural"
+                    data-publico="todos"
+                    data-mes="10"
+                    data-nome="Festival Cultural">
+
+
+                    <div class="evento-card-top">
+
+
+                        <div class="evento-date">
+
+                            <strong>
+                                10
+                            </strong>
+
+                            <span>
+                                OUT
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-type cultural">
+
+                            <i class="fa-solid fa-masks-theater"></i>
+
+                            Cultural
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="evento-card-body">
+
+                        <h3>
+                            Festival Cultural
+                        </h3>
+
+                        <p>
+                            Apresentações de música, dança,
+                            teatro e arte dos alunos.
+                        </p>
+
+
+                        <div class="evento-info">
+
+                            <span>
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                14:00 - 19:00
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Pátio principal
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-publico">
+
+                            <i class="fa-solid fa-school"></i>
+
+                            Toda a escola
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evento-card-footer">
+
+                        <button
+                            class="evento-action edit"
+                            onclick="editarEvento(this)">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="evento-action delete"
+                            onclick="excluirEvento(this)">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- EVENTO 5 -->
+
+                <article
+                    class="evento-card"
+                    data-tipo="comemorativo"
+                    data-publico="todos"
+                    data-mes="10"
+                    data-nome="Dia das Crianças">
+
+
+                    <div class="evento-card-top">
+
+
+                        <div class="evento-date">
+
+                            <strong>
+                                12
+                            </strong>
+
+                            <span>
+                                OUT
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-type celebration">
+
+                            <i class="fa-solid fa-gift"></i>
+
+                            Comemorativo
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="evento-card-body">
+
+                        <h3>
+                            Dia das Crianças
+                        </h3>
+
+                        <p>
+                            Atividades recreativas e programação
+                            especial para os alunos.
+                        </p>
+
+
+                        <div class="evento-info">
+
+                            <span>
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                08:00 - 16:00
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Escola
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-publico">
+
+                            <i class="fa-solid fa-school"></i>
+
+                            Toda a escola
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evento-card-footer">
+
+                        <button
+                            class="evento-action edit"
+                            onclick="editarEvento(this)">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="evento-action delete"
+                            onclick="excluirEvento(this)">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- EVENTO 6 -->
+
+                <article
+                    class="evento-card"
+                    data-tipo="academico"
+                    data-publico="professores"
+                    data-mes="10"
+                    data-nome="Formação de Professores">
+
+
+                    <div class="evento-card-top">
+
+
+                        <div class="evento-date">
+
+                            <strong>
+                                18
+                            </strong>
+
+                            <span>
+                                OUT
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-type academic">
+
+                            <i class="fa-solid fa-chalkboard-user"></i>
+
+                            Acadêmico
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="evento-card-body">
+
+                        <h3>
+                            Formação de Professores
+                        </h3>
+
+                        <p>
+                            Encontro de formação continuada
+                            para a equipe pedagógica.
+                        </p>
+
+
+                        <div class="evento-info">
+
+                            <span>
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                08:00 - 12:00
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Sala de reuniões
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="evento-publico">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            Professores
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evento-card-footer">
+
+                        <button
+                            class="evento-action edit"
+                            onclick="editarEvento(this)">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="evento-action delete"
+                            onclick="excluirEvento(this)">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- ESTADO VAZIO -->
+
+            <div
+                class="eventos-empty"
+                id="eventosEmpty">
+
+                <div class="empty-icon">
+
+                    <i class="fa-regular fa-calendar-xmark"></i>
+
+                </div>
+
+                <h3>
+                    Nenhum evento encontrado
+                </h3>
+
+                <p>
+                    Tente alterar os filtros ou cadastre um novo evento.
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MODAL NOVO EVENTO
+    ====================================================== -->
+
+    <div
+        class="evento-modal-overlay"
+        id="eventoModal">
+
+
+        <div class="evento-modal">
+
+
+            <div class="evento-modal-header">
+
+                <div>
+
+                    <h3 id="modalEventoTitle">
+                        Novo evento
+                    </h3>
+
+                    <p>
+                        Cadastre um novo evento escolar.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="close-modal"
+                    id="closeEventoModal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <form id="eventoForm">
+
+
+                <!-- NOME -->
+
+                <div class="evento-form-group">
+
+                    <label for="nomeEvento">
+                        Nome do evento
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeEvento"
+                        placeholder="Ex.: Feira de Ciências"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DATA / HORÁRIO -->
+
+                <div class="evento-form-row">
+
+
+                    <div class="evento-form-group">
+
+                        <label for="dataEvento">
+                            Data
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dataEvento"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="evento-form-group">
+
+                        <label for="horaEvento">
+                            Horário
+                        </label>
+
+                        <input
+                            type="time"
+                            id="horaEvento"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TIPO / PÚBLICO -->
+
+                <div class="evento-form-row">
+
+
+                    <div class="evento-form-group">
+
+                        <label for="tipoEvento">
+                            Tipo
+                        </label>
+
+                        <select id="tipoEvento" required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="academico">
+                                Acadêmico
+                            </option>
+
+                            <option value="esportivo">
+                                Esportivo
+                            </option>
+
+                            <option value="cultural">
+                                Cultural
+                            </option>
+
+                            <option value="reuniao">
+                                Reunião
+                            </option>
+
+                            <option value="comemorativo">
+                                Comemorativo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="evento-form-group">
+
+                        <label for="publicoEvento">
+                            Público
+                        </label>
+
+                        <select id="publicoEvento" required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="alunos">
+                                Alunos
+                            </option>
+
+                            <option value="professores">
+                                Professores
+                            </option>
+
+                            <option value="responsaveis">
+                                Responsáveis
+                            </option>
+
+                            <option value="todos">
+                                Toda a escola
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- LOCAL -->
+
+                <div class="evento-form-group">
+
+                    <label for="localEvento">
+                        Local
+                    </label>
+
+                    <input
+                        type="text"
+                        id="localEvento"
+                        placeholder="Ex.: Auditório"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DESCRIÇÃO -->
+
+                <div class="evento-form-group">
+
+                    <label for="descricaoEvento">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricaoEvento"
+                        rows="4"
+                        placeholder="Descreva o evento..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- BOTÕES -->
+
+                <div class="evento-modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="cancelEvento">
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Salvar evento
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* ELEMENTOS */
+
+        const eventoModal =
+            document.getElementById("eventoModal");
+
+        const openEventoModal =
+            document.getElementById("openEventoModal");
+
+        const closeEventoModal =
+            document.getElementById("closeEventoModal");
+
+        const cancelEvento =
+            document.getElementById("cancelEvento");
+
+        const eventosGrid =
+            document.getElementById("eventosGrid");
+
+        const eventosEmpty =
+            document.getElementById("eventosEmpty");
+
+        const eventoCount =
+            document.getElementById("eventoCount");
+
+
+
+        /* =================================================
+           ABRIR MODAL
+        ================================================== */
+
+        openEventoModal.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .getElementById("modalEventoTitle")
+                    .textContent = "Novo evento";
+
+                eventoModal.classList.add("show");
+
+            }
+        );
+
+
+
+        /* =================================================
+           FECHAR MODAL
+        ================================================== */
+
+        function fecharEventoModal() {
+
+            eventoModal.classList.remove("show");
+
+            document
+                .getElementById("eventoForm")
+                .reset();
+
+        }
+
+
+        closeEventoModal.addEventListener(
+            "click",
+            fecharEventoModal
+        );
+
+
+        cancelEvento.addEventListener(
+            "click",
+            fecharEventoModal
+        );
+
+
+
+        /* CLICAR FORA */
+
+        eventoModal.addEventListener(
+            "click",
+            function(event) {
+
+                if (event.target === eventoModal) {
+
+                    fecharEventoModal();
+
+                }
+
+            }
+        );
+
+
+
+        /* =================================================
+           FILTROS
+        ================================================== */
+
+        const eventoSearch =
+            document.getElementById("eventoSearch");
+
+        const tipoEventoFilter =
+            document.getElementById("tipoEventoFilter");
+
+        const publicoFilter =
+            document.getElementById("publicoFilter");
+
+        const mesFilter =
+            document.getElementById("mesFilter");
+
+
+
+        function filtrarEventos() {
+
+            const busca =
+                eventoSearch.value
+                    .toLowerCase()
+                    .trim();
+
+            const tipo =
+                tipoEventoFilter.value;
+
+            const publico =
+                publicoFilter.value;
+
+            const mes =
+                mesFilter.value;
+
+
+            const cards =
+                document.querySelectorAll(".evento-card");
+
+
+            let quantidade = 0;
+
+
+            cards.forEach(card => {
+
+                const nome =
+                    card.dataset.nome.toLowerCase();
+
+                const cardTipo =
+                    card.dataset.tipo;
+
+                const cardPublico =
+                    card.dataset.publico;
+
+                const cardMes =
+                    card.dataset.mes;
+
+
+                const encontrouBusca =
+                    nome.includes(busca);
+
+                const encontrouTipo =
+                    !tipo || cardTipo === tipo;
+
+                const encontrouPublico =
+                    !publico || cardPublico === publico;
+
+                const encontrouMes =
+                    !mes || cardMes === mes;
+
+
+                if (
+                    encontrouBusca &&
+                    encontrouTipo &&
+                    encontrouPublico &&
+                    encontrouMes
+                ) {
+
+                    card.style.display = "";
+
+                    quantidade++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            eventoCount.textContent =
+                quantidade +
+                (quantidade === 1
+                    ? " evento"
+                    : " eventos");
+
+
+            eventosEmpty.style.display =
+                quantidade === 0
+                    ? "flex"
+                    : "none";
+
+        }
+
+
+
+        eventoSearch.addEventListener(
+            "input",
+            filtrarEventos
+        );
+
+
+        tipoEventoFilter.addEventListener(
+            "change",
+            filtrarEventos
+        );
+
+
+        publicoFilter.addEventListener(
+            "change",
+            filtrarEventos
+        );
+
+
+        mesFilter.addEventListener(
+            "change",
+            filtrarEventos
+        );
+
+
+
+        /* =================================================
+           EXCLUIR EVENTO
+        ================================================== */
+
+        function excluirEvento(button) {
+
+            const card =
+                button.closest(".evento-card");
+
+
+            const nome =
+                card.dataset.nome;
+
+
+            const confirmar =
+                confirm(
+                    "Deseja excluir o evento \"" +
+                    nome +
+                    "\"?"
+                );
+
+
+            if (confirmar) {
+
+                card.remove();
+
+                filtrarEventos();
+
+            }
+
+        }
+
+
+
+        /* =================================================
+           EDITAR EVENTO
+        ================================================== */
+
+        function editarEvento(button) {
+
+            const card =
+                button.closest(".evento-card");
+
+
+            const nome =
+                card.dataset.nome;
+
+
+            document
+                .getElementById("modalEventoTitle")
+                .textContent = "Editar evento";
+
+
+            document
+                .getElementById("nomeEvento")
+                .value = nome;
+
+
+            eventoModal.classList.add("show");
+
+        }
+
+
+
+        /* =================================================
+           SALVAR
+        ================================================== */
+
+        document
+            .getElementById("eventoForm")
+            .addEventListener(
+                "submit",
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    alert(
+                        "Evento cadastrado com sucesso!"
+                    );
+
+
+                    fecharEventoModal();
+
+                }
+            );
+
+
+
+        /* =================================================
+           ATUALIZAR
+        ================================================== */
+
+        document
+            .getElementById("refreshEventos")
+            .addEventListener(
+                "click",
+                function() {
+
+                    this.classList.add("rotating");
+
+
+                    setTimeout(() => {
+
+                        this.classList.remove(
+                            "rotating"
+                        );
+
+                    }, 600);
+
+                }
+            );
+
+
+
+        /* =================================================
+           SAIR
+        ================================================== */
+
+        document
+            .querySelector(".sair")
+            .addEventListener(
+                "click",
+                function(event) {
+
+                    event.preventDefault();
+
+                    alert(
+                        "Saindo do sistema..."
+                    );
+
+                }
+            );
+
+
+    </script>
+
+
+</body>
+
+</html>

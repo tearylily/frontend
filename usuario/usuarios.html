@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Schoolnet - Usuários</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside class="sidebar">
+
+            <!-- Logo -->
+            <div class="sidebar-logo">
+
+                <div class="sidebar-logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <span>Schoolnet</span>
+
+            </div>
+
+
+            <!-- Menu principal -->
+            <nav class="sidebar-menu">
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    <span>Início</span>
+                </a>
+
+
+                <a href="#" class="active">
+                    <span class="icon">
+                        <i class="fa-solid fa-users"></i>
+                    </span>
+                    <span>Usuários</span>
+                </a>
+
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </span>
+                    <span>Turmas</span>
+                </a>
+
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-book"></i>
+                    </span>
+                    <span>Matérias</span>
+                </a>
+
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
+                    <span>Horários</span>
+                </a>
+
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </span>
+                    <span>Cardápio</span>
+                </a>
+
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-regular fa-calendar"></i>
+                    </span>
+                    <span>Eventos</span>
+                </a>
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-regular fa-calendar"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Menu inferior -->
+            <div class="sidebar-bottom">
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+
+                    <span>Configurações</span>
+                </a>
+
+
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+
+                    <span>Sair</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             CONTEÚDO PRINCIPAL
+        ====================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- Cabeçalho -->
+            <header class="page-header">
+
+                <h1 class="page-title">
+                    Usuários
+                </h1>
+
+
+                <button
+                    type="button"
+                    class="add-button"
+                    onclick="abrirModal()"
+                >
+
+                    <span class="plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                    <span>Adicionar</span>
+
+                </button>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 TABELA DE USUÁRIOS
+            ================================================== -->
+
+            <section class="users-card">
+
+                <table class="users-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Nome
+                            </th>
+
+                            <th>
+                                E-mail
+                            </th>
+
+                            <th>
+                                Perfil
+                            </th>
+
+                            <th>
+                                Ações
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- João -->
+                        <tr>
+
+                            <td>
+                                <span class="user-name">
+                                    João Silva
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="user-email">
+                                    joao@exemplo.com
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge role-aluno">
+                                    Aluno
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        type="button"
+                                        class="action-button edit"
+                                        title="Editar usuário"
+                                        onclick="editarUsuario('João Silva')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="action-button delete"
+                                        title="Excluir usuário"
+                                        onclick="excluirUsuario('João Silva')"
+                                    >
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Maria -->
+                        <tr>
+
+                            <td>
+                                <span class="user-name">
+                                    Maria Costa
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="user-email">
+                                    maria@exemplo.com
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge role-professor">
+                                    Professor
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        type="button"
+                                        class="action-button edit"
+                                        title="Editar usuário"
+                                        onclick="editarUsuario('Maria Costa')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="action-button delete"
+                                        title="Excluir usuário"
+                                        onclick="excluirUsuario('Maria Costa')"
+                                    >
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Admin -->
+                        <tr>
+
+                            <td>
+                                <span class="user-name">
+                                    Admin
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="user-email">
+                                    admin@exemplo.com
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge role-admin">
+                                    Administrador
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        type="button"
+                                        class="action-button edit"
+                                        title="Editar usuário"
+                                        onclick="editarUsuario('Admin')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="action-button delete"
+                                        title="Excluir usuário"
+                                        onclick="excluirUsuario('Admin')"
+                                    >
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         MODAL - ADICIONAR USUÁRIO
+    ========================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="modalOverlay"
+        style="display: none;"
+    >
+
+        <div class="modal">
+
+            <h2>
+                Adicionar usuário
+            </h2>
+
+
+            <form id="userForm">
+
+
+                <!-- Nome -->
+                <div class="form-group">
+
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite o nome"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- E-mail -->
+                <div class="form-group">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite o e-mail"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Perfil -->
+                <div class="form-group">
+
+                    <label for="perfil">
+                        Perfil
+                    </label>
+
+                    <select
+                        id="perfil"
+                        name="perfil"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="aluno">
+                            Aluno
+                        </option>
+
+                        <option value="professor">
+                            Professor
+                        </option>
+
+                        <option value="admin">
+                            Administrador
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Senha -->
+                <div class="form-group">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite a senha"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Botões -->
+
+                <div
+                    style="
+                        display:flex;
+                        justify-content:flex-end;
+                        gap:10px;
+                        margin-top:20px;
+                    "
+                >
+
+                    <button
+                        type="button"
+                        class="action-button"
+                        onclick="fecharModal()"
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="add-button"
+                    >
+                        Salvar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* Abrir modal */
+
+        function abrirModal() {
+
+            document.getElementById("modalOverlay").style.display = "flex";
+
+        }
+
+
+        /* Fechar modal */
+
+        function fecharModal() {
+
+            document.getElementById("modalOverlay").style.display = "none";
+
+        }
+
+
+        /* Editar usuário */
+
+        function editarUsuario(nome) {
+
+            alert("Editar usuário: " + nome);
+
+        }
+
+
+        /* Excluir usuário */
+
+        function excluirUsuario(nome) {
+
+            const confirmar = confirm(
+                "Deseja realmente excluir o usuário " + nome + "?"
+            );
+
+            if (confirmar) {
+
+                alert(
+                    "Usuário " + nome + " excluído."
+                );
+
+            }
+
+        }
+
+
+        /* Fechar modal clicando fora */
+
+        document
+            .getElementById("modalOverlay")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+
+                    fecharModal();
+
+                }
+
+            });
+
+
+        /* Formulário */
+
+        document
+            .getElementById("userForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const nome =
+                    document.getElementById("nome").value;
+
+                alert(
+                    "Usuário " + nome + " cadastrado com sucesso!"
+                );
+
+                this.reset();
+
+                fecharModal();
+
+            });
+
+    </script>
+
+</body>
+
+</html>

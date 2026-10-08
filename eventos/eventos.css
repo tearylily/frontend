@@ -1,0 +1,589 @@
+/* =====================================================
+   EVENTOS
+===================================================== */
+
+.eventos-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.eventos-heading h2 {
+    margin: 0 0 6px;
+    color: var(--navy);
+    font-size: 22px;
+}
+
+.eventos-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.eventos-filter-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(20, 43, 73, 0.04);
+}
+
+.eventos-filters {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.evento-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.evento-filter-group label {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.evento-filter-group select {
+    width: 100%;
+    height: 42px;
+    padding: 0 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+}
+
+.evento-filter-group select:focus {
+    border-color: var(--blue);
+}
+
+.evento-search-box {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.evento-search-box i {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.evento-search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   CABEÇALHO DA LISTA
+===================================================== */
+
+.eventos-list-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.eventos-list-heading h3 {
+    margin: 0 0 4px;
+    color: var(--navy);
+    font-size: 17px;
+}
+
+.eventos-list-heading span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+/* =====================================================
+   CARD DO EVENTO
+===================================================== */
+
+.evento-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(20, 43, 73, 0.04);
+    transition: 0.2s ease;
+}
+
+.evento-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(20, 43, 73, 0.08);
+}
+
+
+/* =====================================================
+   TOPO DO CARD
+===================================================== */
+
+.evento-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 18px 18px 0;
+}
+
+
+/* DATA */
+
+.evento-date {
+    width: 55px;
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eef5ff;
+    border-radius: 9px;
+}
+
+.evento-date strong {
+    color: var(--blue);
+    font-size: 21px;
+    line-height: 22px;
+  }
+
+.evento-date span {
+    margin-top: 3px;
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   TIPO
+===================================================== */
+
+.evento-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.evento-type.academic {
+    background: #eaf3ff;
+    color: #1677ff;
+}
+
+.evento-type.sports {
+    background: #eaf9f0;
+    color: #159447;
+}
+
+.evento-type.cultural {
+    background: #f2edff;
+    color: #7955d6;
+}
+
+.evento-type.meeting {
+    background: #fff5e8;
+    color: #db8b18;
+}
+
+.evento-type.celebration {
+    background: #fff0f4;
+    color: #d84d78;
+}
+
+
+/* =====================================================
+   CORPO
+===================================================== */
+
+.evento-card-body {
+    padding: 17px 18px;
+}
+
+.evento-card-body h3 {
+    margin: 0 0 7px;
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.evento-card-body p {
+    min-height: 40px;
+    margin: 0 0 15px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* =====================================================
+   INFORMAÇÕES
+===================================================== */
+
+.evento-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid var(--border);
+}
+
+.evento-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    font-size: 11px;
+}
+
+.evento-info i {
+    width: 15px;
+    color: var(--blue);
+    text-align: center;
+}
+
+
+/* =====================================================
+   PÚBLICO
+===================================================== */
+
+.evento-publico {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 13px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.evento-publico i {
+    color: var(--blue);
+}
+
+
+/* =====================================================
+   RODAPÉ DO CARD
+===================================================== */
+
+.evento-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: #fafbfd;
+    border-top: 1px solid var(--border);
+}
+
+.evento-action {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.evento-action.edit {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--blue);
+}
+
+.evento-action.delete {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    color: #d9534f;
+}
+
+.evento-action.delete:hover {
+    background: #fff0f0;
+}
+
+
+/* =====================================================
+   ESTADO VAZIO
+===================================================== */
+
+.eventos-empty {
+    display: none;
+    min-height: 280px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-top: 18px;
+}
+
+.eventos-empty .empty-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background: #eef5ff;
+    color: var(--blue);
+    font-size: 21px;
+}
+
+.eventos-empty h3 {
+    margin: 0 0 6px;
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.eventos-empty p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.evento-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(12, 28, 48, 0.55);
+}
+
+.evento-modal-overlay.show {
+    display: flex;
+}
+
+.evento-modal {
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(10, 30, 55, 0.2);
+}
+
+.evento-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.evento-modal-header h3 {
+    margin: 0 0 5px;
+    color: var(--navy);
+    font-size: 18px;
+}
+
+.evento-modal-header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.close-modal {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    background: #f4f7fa;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.close-modal:hover {
+    background: #eaf0f6;
+    color: var(--navy);
+}
+
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+
+#eventoForm {
+    padding: 22px;
+}
+
+.evento-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 17px;
+}
+
+.evento-form-group label {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.evento-form-group input,
+.evento-form-group select,
+.evento-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.evento-form-group input,
+.evento-form-group select {
+    height: 43px;
+}
+
+.evento-form-group textarea {
+    resize: vertical;
+}
+
+.evento-form-group input:focus,
+.evento-form-group select:focus,
+.evento-form-group textarea:focus {
+    border-color: var(--blue);
+}
+
+.evento-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+/* =====================================================
+   BOTÕES DO MODAL
+===================================================== */
+
+.evento-modal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 5px;
+}
+
+
+/* =====================================================
+   ANIMAÇÃO ATUALIZAR
+===================================================== */
+
+.rotating {
+    animation: rotateButton 0.6s ease;
+}
+
+@keyframes rotateButton {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1150px) {
+
+    .eventos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eventos-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .eventos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eventos-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .eventos-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .evento-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .evento-modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .evento-modal-actions button {
+        width: 100%;
+    }
+
+}
